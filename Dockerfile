@@ -17,6 +17,6 @@ RUN ["./deposit.sh", "install"]
 
 ARG cli_command
 
-ENTRYPOINT [ "python3" ]
+ENTRYPOINT [ "python3", "generate_deposit_files.py" ]
 
 CMD [ $cli_command ]
