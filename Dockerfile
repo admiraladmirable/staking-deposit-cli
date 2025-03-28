@@ -7,7 +7,7 @@ COPY requirements.txt setup.py ./
 # COPY staking_deposit ./staking_deposit
 COPY . .
 
-RUN apt-get update && apt-get install -y gcc
+RUN apt-get update && apt-get install -y gcc jq
 
 RUN pip3 install --no-cache-dir -r requirements.txt && \
   python3 setup.py install && \
